@@ -1,0 +1,56 @@
+﻿<screens:ScreenBase  x:Class="thialgou.controls.screens.ScreenMbInfoSVC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:screens="clr-namespace:thialgou.controls.screens;assembly="
+    Height="300" Width="300">
+    
+    <screens:ScreenBase.Resources>
+        <Style x:Key="TextBlockStyleBase" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+        </Style>
+        <Style x:Key="TextBlockStyleName" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockStyleBase}">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+        </Style>
+        <Style x:Key="TextBlockStyleValue" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockStyleBase}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+    </screens:ScreenBase.Resources>
+    <ScrollViewer>
+        <Grid Name="m_Grid" ShowGridLines="True" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.ColumnSpan="2" Grid.Row="0" Fill="AliceBlue" Margin="0" />
+            <TextBlock Style="{StaticResource TextBlockStyleName}">InCropWindow</TextBlock>
+            <TextBlock Grid.Column="1" Name="m_TextBlockInCropWindow" Style="{StaticResource TextBlockStyleValue}">False</TextBlock>
+
+            <TextBlock Grid.Row="1" Style="{StaticResource TextBlockStyleName}">residual_prediction_flag</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="1" Name="m_TextBlockResidualPredictionFlag" Style="{StaticResource TextBlockStyleValue}">0</TextBlock>
+            
+            <Rectangle Grid.ColumnSpan="2" Grid.Row="2" Fill="AliceBlue" Margin="0" />
+            <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource TextBlockStyleName}">base_mode_flag</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="2" Name="m_TextBlockBLSkippedFlag" Style="{StaticResource TextBlockStyleValue}">0</TextBlock>
+
+            
+        </Grid>
+    </ScrollViewer>
+</screens:ScreenBase>

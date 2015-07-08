@@ -1,0 +1,14 @@
+﻿<screens:ScreenBase x:Class="thialgou.controls.screens.ScreenPictureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:screens="clr-namespace:thialgou.controls.screens;assembly="
+    Height="300" Width="381" Loaded="ScreenBase_Loaded">
+    <Grid>
+        <Image Name="m_Image" Stretch="Uniform" MouseMove="m_Image_MouseMove" MouseLeave="m_Image_MouseLeave" Opacity="1" MouseUp="m_Image_MouseUp" MouseEnter="m_Image_MouseEnter" SizeChanged="m_Image_SizeChanged" />
+        <Popup Name="m_FloatingToolTip" Placement="Relative" PlacementTarget="{Binding ElementName=m_Image}" AllowsTransparency="True" Focusable="False">
+            <Border BorderThickness="1" BorderBrush="AliceBlue" Padding="2">
+                <TextBlock Name="m_TextBlockImageToolTip" FontSize="14" FontFamily="Arial" TextDecorations="None" FontWeight="Bold" Background="Transparent" Opacity="1">YYYH</TextBlock>
+            </Border>
+        </Popup>
+    </Grid>
+</screens:ScreenBase>

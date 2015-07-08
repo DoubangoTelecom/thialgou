@@ -1,0 +1,13 @@
+﻿<screens:ScreenBase x:Class="thialgou.controls.screens.ScreenMbInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:screens="clr-namespace:thialgou.controls.screens;assembly="
+    Height="300" Width="300">
+    <Grid>
+        <TabControl Name="tabControl" TabStripPlacement="Bottom" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0" FlowDirection="LeftToRight">
+            <TabItem Header="tabItem1" Name="tabItem1">
+                <Grid />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</screens:ScreenBase>

@@ -1,0 +1,22 @@
+﻿<screens:ScreenBase x:Class="thialgou.controls.screens.ScreenThumbnails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:screens="clr-namespace:thialgou.controls.screens;assembly="
+    xmlns:items="clr-namespace:thialgou.controls.items;assembly="
+    xmlns:model="clr-namespace:thialgou.lib.model;assembly=lib"
+    Height="232" Width="300" Background="AliceBlue">
+    <Grid Width="Auto">
+        <ListBox Name="m_ListBox" ItemsSource="{Binding}" HorizontalContentAlignment="Stretch" BorderBrush="SkyBlue">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <items:ItemThumbnail Value="{Binding Path=.}" HorizontalAlignment="Left" VerticalAlignment="Top"></items:ItemThumbnail>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</screens:ScreenBase>

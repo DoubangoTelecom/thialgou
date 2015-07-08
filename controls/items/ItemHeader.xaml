@@ -1,0 +1,10 @@
+﻿<ctrl:ItemBase x:TypeArguments="model:Elt" x:Class="thialgou.controls.items.ItemHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrl="clr-namespace:thialgou.controls.items;assembly="
+    xmlns:model="clr-namespace:thialgou.lib.model;assembly=lib"
+    >
+    <Grid>
+        <Label HorizontalAlignment="Stretch" Name="m_LabelDescription" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Stretch">Label</Label>
+    </Grid>
+</ctrl:ItemBase>

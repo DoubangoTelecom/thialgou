@@ -1,0 +1,46 @@
+﻿<Window x:Class="thialgou.appl.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Thialgou Codec Analyzer" Height="804" Width="1248" Loaded="Window_Loaded" Closed="Window_Closed" MinWidth="1048" MinHeight="604">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="190*" MinHeight="94" MaxHeight="190" />
+            <RowDefinition Height="3" MaxHeight="3" MinHeight="3" />
+            <RowDefinition Height="*" MinHeight="248.13" />
+            <RowDefinition Height="3" MaxHeight="3" MinHeight="3" />
+            <RowDefinition Height="Auto" MinHeight="107.957" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="149*" MinWidth="149" />
+            <ColumnDefinition Width="3" MaxWidth="3" MinWidth="3" />
+            <ColumnDefinition Width="414.214*" MinWidth="414.214" />
+            <ColumnDefinition Width="3" MaxWidth="3" MinWidth="3" />
+            <ColumnDefinition Width="149*" MinWidth="149" />
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="5" Margin="0,-0.8,0,0" Name="tabControlThumbs" Background="Transparent">
+            <TabItem Header="tabItem1" Name="tabItem1">
+                <Grid />
+            </TabItem>
+        </TabControl>
+        <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Name="gridSplitter1" Cursor="SizeNS" Background="Transparent" ResizeDirection="Rows" Grid.ColumnSpan="5" />
+        <TabControl Grid.ColumnSpan="5" Grid.Row="4" Margin="0,0,0,0" Name="tabControlMacroblockBits" TabStripPlacement="Bottom" Background="Transparent">
+            <TabItem Header="tabItem2" Name="tabItem2">
+                <Grid />
+            </TabItem>
+        </TabControl>
+        <GridSplitter Background="Transparent" Cursor="SizeNS" Margin="0,0,0,0" Name="gridSplitter2" ResizeDirection="Rows" Grid.Row="3" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" />
+        <TabControl Grid.Row="2" Margin="0,0,0,0" Name="tabControlHdrs" TabStripPlacement="Bottom" Background="Transparent" />
+        <TabControl Grid.Column="4" Grid.Row="2" Margin="0,0" Name="tabControlInfo" TabStripPlacement="Bottom" Background="Transparent">
+            <TabItem Header="tabItem4" Name="tabItem4">
+                <Grid />
+            </TabItem>
+        </TabControl>
+        <GridSplitter Grid.Column="1" Grid.Row="2" Name="gridSplitter3" Background="Transparent" ResizeDirection="Columns" HorizontalAlignment="Stretch" />
+        <GridSplitter Background="Transparent" Name="gridSplitter4" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Stretch" ResizeDirection="Columns" />
+        <TabControl Grid.Column="2" Grid.Row="2" Margin="0" Name="tabControlPictureView" Background="Transparent">
+            <TabItem Header="tabItem5" Name="tabItem5">
+                <Grid />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

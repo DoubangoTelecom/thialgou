@@ -1,0 +1,9 @@
+﻿<ctrl:ItemBase x:TypeArguments="model:Elt" x:Class="thialgou.controls.items.ItemHdrItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrl="clr-namespace:thialgou.controls.items;assembly="
+    xmlns:model="clr-namespace:thialgou.lib.model;assembly=lib">
+    <Grid>
+        <Label Name="label" Padding="0" FontSize="12">Label</Label>
+    </Grid>
+</ctrl:ItemBase>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{023BDF0D-60DF-4494-B157-58FC5B146071}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>common_csharp</RootNamespace>
+    <AssemblyName>common_csharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\common\csharp\BlkMode.cs">
+      <Link>BlkMode.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonControl.cs">
+      <Link>CommonControl.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonElementType_t.cs">
+      <Link>CommonElementType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonElt.cs">
+      <Link>CommonElt.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonEltMbDataType_t.cs">
+      <Link>CommonEltMbDataType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonEltMbType_t.cs">
+      <Link>CommonEltMbType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonEltVector.cs">
+      <Link>CommonEltVector.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonEltVectorPtr.cs">
+      <Link>CommonEltVectorPtr.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonError.cs">
+      <Link>CommonError.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonFunction.cs">
+      <Link>CommonFunction.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonH264Nalu.cs">
+      <Link>CommonH264Nalu.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonH264Section.cs">
+      <Link>CommonH264Section.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonHeader.cs">
+      <Link>CommonHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonHeaderType_t.cs">
+      <Link>CommonHeaderType_t.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMain.cs">
+      <Link>CommonMain.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMainH264.cs">
+      <Link>CommonMainH264.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMb.cs">
+      <Link>CommonMb.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMbH264.cs">
+      <Link>CommonMbH264.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMbVectorPtr.cs">
+      <Link>CommonMbVectorPtr.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMv.cs">
+      <Link>CommonMv.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonMvVector.cs">
+      <Link>CommonMvVector.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonSyntax.cs">
+      <Link>CommonSyntax.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\commonWRAP.cs">
+      <Link>commonWRAP.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\commonWRAPPINVOKE.cs">
+      <Link>commonWRAPPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\CommonYuvLine_t.cs">
+      <Link>CommonYuvLine_t.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\Intra4x4PredMode.cs">
+      <Link>Intra4x4PredMode.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\IntraChromaPredMode.cs">
+      <Link>IntraChromaPredMode.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\MbMode.cs">
+      <Link>MbMode.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\NalUnitType.cs">
+      <Link>NalUnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\common\csharp\SliceType.cs">
+      <Link>SliceType.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿<screens:ScreenBase x:Class="thialgou.controls.screens.ScreenMbInfoSubBlocks"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:screens="clr-namespace:thialgou.controls.screens;assembly="
+    Background="AliceBlue"
+    Height="300" Width="300">
+    <screens:ScreenBase.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+    </screens:ScreenBase.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid VerticalAlignment="Center" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Name="m_TextBlock0" Style="{StaticResource TextBlockStyle}" Background="Beige">(0,0)</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" Name="m_TextBlock1" Style="{StaticResource TextBlockStyle}">(0,0)</TextBlock>
+
+            <TextBlock Grid.Column="0" Grid.Row="1" Name="m_TextBlock2" Style="{StaticResource TextBlockStyle}" Background="Beige">(0,0)</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="1" Name="m_TextBlock3" Style="{StaticResource TextBlockStyle}">(0,0)</TextBlock>
+        </Grid>
+    </ScrollViewer>
+</screens:ScreenBase>

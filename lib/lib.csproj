@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{447B3260-F05D-4C54-AC97-1AB6C2D265D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>thialgou.lib</RootNamespace>
+    <AssemblyName>lib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=c198e78e289aebd0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\thirdparties\win32\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonTypes.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Decoder.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Engine.Hdr.cs">
+      <DependentUpon>Engine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Thumb.cs">
+      <DependentUpon>Engine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="events\EltEventArgs.cs" />
+    <Compile Include="events\EventHandlerTrigger.cs" />
+    <Compile Include="events\FrameEventDrawArgs.cs" />
+    <Compile Include="events\h264\HdrEventParseArgsH264.cs" />
+    <Compile Include="events\HdrEventParseArgs.cs" />
+    <Compile Include="events\MacroblockEventArgs.cs" />
+    <Compile Include="events\MyEventArgs.cs" />
+    <Compile Include="events\PictureEventArgs.cs.cs" />
+    <Compile Include="events\StringEventArgs.cs" />
+    <Compile Include="h264\H264Decoder.cs" />
+    <Compile Include="h264\H264Mb.cs" />
+    <Compile Include="h264\H264Nalu.cs" />
+    <Compile Include="h264\H264PicParamSet.cs" />
+    <Compile Include="h264\H264Picture.cs" />
+    <Compile Include="h264\H264SeqParamSet.cs" />
+    <Compile Include="h264\H264Slice.cs" />
+    <Compile Include="h264\HdrParserH264.cs" />
+    <Compile Include="h264\MainInstH264.cs" />
+    <Compile Include="Macroblock.cs" />
+    <Compile Include="model\Elt.cs" />
+    <Compile Include="model\EltControl.cs" />
+    <Compile Include="model\EltError.cs" />
+    <Compile Include="model\EltFunction.cs" />
+    <Compile Include="model\EltH264Section.cs" />
+    <Compile Include="model\EltHeader.cs" />
+    <Compile Include="model\EltH264Nalu.cs" />
+    <Compile Include="model\EltMb.cs" />
+    <Compile Include="model\EltSyntax.cs" />
+    <Compile Include="model\HdrParser.cs" />
+    <Compile Include="model\Hdr.cs" />
+    <Compile Include="model\MbBits4x4.cs" />
+    <Compile Include="model\MediaFileInfo.cs" />
+    <Compile Include="model\Thumb.cs" />
+    <Compile Include="MyObservableCollection.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\IService.cs" />
+    <Compile Include="services\IServiceHdrParser.cs" />
+    <Compile Include="SwigHelper.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common_csharp\common_csharp.csproj">
+      <Project>{023BDF0D-60DF-4494-B157-58FC5B146071}</Project>
+      <Name>common_csharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\io_csharp\io_csharp.csproj">
+      <Project>{20CF5C7A-6423-4AB9-B498-4B436ADA5578}</Project>
+      <Name>io_csharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="services\impl\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
